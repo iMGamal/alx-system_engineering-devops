@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod +x ogu
+find -type d -exec chmod 755 {} +
