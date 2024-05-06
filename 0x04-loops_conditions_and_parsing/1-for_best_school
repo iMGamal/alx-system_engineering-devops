@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #This is a command to iterate a sentence 10 times using for loop
-i = 10
+i=10
 for ((i = 0; i < 10; i++))
 do
 	echo "Best School"
