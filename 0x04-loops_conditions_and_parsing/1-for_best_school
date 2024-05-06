@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#This is a command to iterate a sentence 10 times using for loop
+int i;
+for (i = 0; i < 10; i++)
+	{
+		printf("Best School");
+	}
