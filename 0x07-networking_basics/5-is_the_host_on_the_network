@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 #This is a command to ping an ip
-if [ "$n" ]
+if [ $n -eq 0 ]
 then
-	ping  "$n" -c 5
-else
 	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+	exit
+elif [ $n -gt 1 ]
+then
+	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+	exit
+else
+	ping "$1" -c 5
 fi
