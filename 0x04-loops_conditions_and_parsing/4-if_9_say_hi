@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#This is a command to iterate a statement using while loop as well as incorporating a condition
+i=0
+while [ $i -lt 10 ]
+do
+	if [ $i -eq 9 ]
+	then
+		echo "Hi"
+	fi
+	echo "Best school"
+	(( i++ ))
+done
