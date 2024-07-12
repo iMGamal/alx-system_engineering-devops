@@ -2,4 +2,3 @@
 # Configure it to only listen to port 80
 sudo sed -i 's/listen [::]:80 default_server;/# listen [::]:80 default_server;/g' /etc/nginx/sites-available/default
 sudo service nginx restart
-kill -9 "$(/var/run/nginx.pid)"
