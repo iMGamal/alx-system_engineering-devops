@@ -10,6 +10,6 @@ elif [ $# -eq 1 ]; then
 	do
 		record=$(dig ${arg}.$1 | awk '/^;; ANSWER SECTION:/ {getline; print $4}')
 		info=$(dig ${arg}.$1 | awk '/^;; ANSWER SECTION:/ {getline; print $5}')
-		echo "The subdomain ${arg} is a ${type} record and points to ${info}"
+		echo "The subdomain ${arg} is a ${record} record and points to ${info}"
 	done
 fi
