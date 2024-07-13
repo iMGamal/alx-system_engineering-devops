@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Handling DNS
+function subdomain_info {
+local domain =$1
+local subdomain =$2
+local type =$(dig $2.$1 | awk '/^;; ANSWER SECTION:/ {getline; print $4}')
+local info =$(dig $2.$1 | awk '/^;; ANSWER SECTION:/ {getline; print $5}')
+if [$# -eq 2]; then
+	echo "The subdomain ${subdomain} is a ${type} record and points to ${info}"
+elif [$# -eq 1]; then
+	local subdomain=$("www" "lb-01" "web-01" "web-02")
+	for arg in "${subdomain[@]}"; do
+		echo The subdomain ${subdomain} is a ${type} record and points to ${info}"
+	done
+fi
