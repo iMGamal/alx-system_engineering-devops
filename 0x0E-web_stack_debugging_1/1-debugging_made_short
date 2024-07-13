@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Configure it to only listen to port 80
-sudo sed -i 's/listen [::]:80 default_server;/# listen [::]:80 default_server;/g' /etc/nginx/sites-available/default
+sudo sed -i 's/sites-enabled/sites-available/g' /etc/nginx/sites-available/default
 sudo service nginx restart
-sudo service ngonx stop
+sudo service nginx stop
