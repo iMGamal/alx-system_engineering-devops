@@ -8,7 +8,7 @@ function subdomain_info {
 		local info=$(dig ${subdomain}.${domain} | awk '/^;; ANSWER SECTION:/ {getline; print $5}')
 		echo "The subdomain ${subdomain} is a ${type} record and points to ${info}"
 	elif [ $# -eq 1 ]; then
-		local subdomains=("www" "lb-01" "web-01" "web-02")
+		declare subdomains=("www" "lb-01" "web-01" "web-02")
 		for arg in "${subdomains[@]}";
 		do
 			local type=$(dig ${arg}.${domain} | awk '/^;; ANSWER SECTION:/ {getline; print $4}')
