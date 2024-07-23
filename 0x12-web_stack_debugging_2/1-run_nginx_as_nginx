@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Script to run nginx server as nginx
+sudo -u nginx bash -c "
+sed -i 's/listen 80 default_server;/listen 8080 default_server;/g' /etc/nginx/site-avaialable/default && service nginx restart
+"
