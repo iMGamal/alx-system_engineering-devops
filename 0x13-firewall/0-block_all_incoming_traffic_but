@@ -1,9 +1,13 @@
 sudo apt-get install ufw
-sudo ufw default deny 1:21/tcp
-sudo ufw default deny 23:79/tcp
-sudo ufw default deny 81:442/tcp
-sudo ufw default deny 444:65535/tcp
+sudo ufw default deny incoming
 sudo ufw default allow outgoing
+sudo ufw deny 1:21/tcp
+sudo ufw deny 23:79/tcp
+sudo ufw deny 81:442/tcp
+sudo ufw deny 444:65535/tcp
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
 sudo ufw disable
 sudo ufw enable
 
