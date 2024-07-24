@@ -1,9 +1,11 @@
-sudo apt install ufw
+sudo apt-get install ufw
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow 22/tcp
 sudo ufw allow 443/tcp
 sudo ufw allow 80/tcp
+sudo apt-get install nmap
+sudo nmap -p 1-65535 <54.236.16.65>
 sudo ufw disable
 sudo ufw enable
-sudo ufw verbose
+
