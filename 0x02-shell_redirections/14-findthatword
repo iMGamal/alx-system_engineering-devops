@@ -1,2 +1,2 @@
 #!/bin/bash
-find /etc type f -name "passwd" -exec grep "root" {} +
+grep "root" /etc/passwd
