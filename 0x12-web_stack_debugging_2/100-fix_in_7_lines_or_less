@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#Script to change user and control activity
-sudo sed -i "s/www-data/nginx/g" /etc/nginx/nginx.conf
-pkill apache2
-sudo sed -i "s/80/8080/g" /etc/nginx/sites-available/default
-sudo -u nginx service nginx restart
-
