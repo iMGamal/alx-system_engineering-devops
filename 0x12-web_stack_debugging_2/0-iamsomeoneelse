@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-#Script that takes the first argument as the name of user
-sudo -u "$1" whoami

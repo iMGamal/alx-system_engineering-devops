@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-#This is a command that dispaly all processes containing the word bash
-#shellcheck disable=SC2009
-ps aux | awk '/bash/'
