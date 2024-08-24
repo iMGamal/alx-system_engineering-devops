@@ -1,6 +1,6 @@
 # Issue Summary:
 
-* Duration of the outage: 4 hours, from 19:00 to 21:00 (UTC) on August 10, 2024
+* Duration of the outage: 2 hours, from 19:00 to 21:00 (UTC) on August 10, 2024
 
 * Impact: User authentication service was down and 70% of users were unable to access their accounts on our platform. 
 
