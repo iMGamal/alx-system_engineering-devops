@@ -1,7 +1,7 @@
 server {
     listen 80;
     listen [::]:80 default_server;
-    server_name emadanwer.tech;
+    server_name nginx;
     location /hbnb_static {
         alias /data/web_static/current/;
     }
